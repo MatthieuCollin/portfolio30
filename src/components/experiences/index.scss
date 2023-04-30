@@ -1,0 +1,217 @@
+.experiences{
+    background-color: white;
+    color: black;
+    padding: 1%;
+
+    .skills{
+        margin: 1%;
+        height: 90%;
+        h2{
+            margin: 1%;
+        }
+
+        p{
+            margin: 1%;
+        }
+
+        .content{
+            background-color: #ecf5ff;
+            margin: auto;
+            width: 90%;
+            padding: 1%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border-radius: 10px;
+
+            
+
+            .skill{
+                background-color: white;
+                margin: 1%;
+                width: 12%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 10px;
+                padding: 1%;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+                .icons{
+                    font-size: 100px;
+                }
+
+                .html{
+                    color: red;
+                }
+
+                .css{
+                    color: #264de4;
+                }
+
+                .js{
+                    color: #f0db4f;
+                }
+
+                .nodejs{
+                    color: #303030 ;
+                }
+
+                .react{
+                    color: #61dbfb;
+                }
+
+                .php{
+                    color: #8993be;
+                }
+
+                .symfony{
+                    color: #455A64;
+                }
+
+                .sql{
+                    color: #00758F;
+                }
+            }        
+        }
+    }
+
+    .jobs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        
+    
+        .companies, .schools {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+        .company, .school {
+            margin: 1%;
+
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+            h3 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 32px;
+        
+                
+        
+                p {
+                    font-size: 24px;
+                    color: #999;
+                    margin: 0;
+                }
+                }
+        
+                .content {
+                    margin-left: 1%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                        .skillsJob{
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        img {
+                            height: 250px;
+                        }
+                
+                        p {
+                            margin: 10px 0;
+                            font-size: 24px;
+                            display: flex;
+                            align-items: center;
+                
+                            .arrow {
+                            margin-right: 10px;
+                            color: #999;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+    
+
+    /* .jobs{
+        width: 100%;
+        margin: auto;
+        padding: 1%;
+        display: flex;
+        justify-content: space-evenly;
+
+        img{
+            width: 100px;
+        }
+
+        .yBar{
+            width: 10px;
+            background-color: #00758F;
+            border-radius: 10px;
+        }
+
+        h3{
+            font-size: 38px;
+        }
+
+        .companies, .schools{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 1%;
+            h2{
+                font-size: 56px;
+                
+            }
+        }
+        
+        .company, .school{
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            list-style: none;
+
+            h3{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap ;
+            }
+
+            p{
+                font-weight: 100;
+                margin-left: 10%;
+            }
+            
+            .content{
+                height: 15%;
+                margin: 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            p{
+                display: flex;
+                align-items: center;
+                font-size: 28px;
+
+                .arrow{
+                    color: #149ddd;
+                }
+            }
+        }
+    } */
+}

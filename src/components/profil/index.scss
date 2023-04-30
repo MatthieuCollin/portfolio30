@@ -1,0 +1,122 @@
+.profilBox{
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 1%;
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+    .content{
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about{
+        margin-top: 1%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        .informations{
+            img{
+                width: 1000px;
+                border: 5px solid #149ddd;
+                align-self: flex-start;
+                border-radius: 10px;
+                margin: 1%;
+            }
+
+            .details{
+                display: flex;
+                flex-direction: column;
+            }
+
+            height: fit-content;
+            overflow: hidden;
+            display: flex;
+
+            h3{
+                font-size: 36px
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 2   0vh;
+                padding: 1%;
+
+                li{
+                    margin: 1%;
+                    font-size: 24px;
+                    font-weight: 1000;
+
+                    span{
+                        font-weight: 400;
+                    }
+
+                    .arrow{
+                        color: #149ddd;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    
+
+    p{
+        font-size: 24px;
+    }
+
+    .reco{
+        .content{
+            margin: 1%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .person{
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                padding: 1%;
+                width: 30%;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                
+                img{
+                    border: 5px solid black;
+                    border-radius: 50%;
+                    width: 60%;
+                    margin: 1%;
+                }
+
+                h3{
+                    margin: 1%;
+                    font-size: 34px;
+                }
+
+                p{
+                    margin: 1%;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .profilBox{
+        width: 100%;
+    }
+}

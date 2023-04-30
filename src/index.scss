@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  color: white;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Rubik';
+}
+
+button {
+  cursor: pointer;
+}
+
+.App{
+  display: flex;
+  background-image: url('./assets/img/banniere2.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.box{
+  height: 100%;
+  margin-left: 15%;
+}
+
+h2{
+  font-size: 42px;
+  border-bottom: 5px solid #149ddd;
+  width: fit-content;
+}
+
+p{
+  font-size: 24px;
+}
+
+.separateur{
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separateur  .bar{
+  width: 80%;
+  height: 3px;
+  background-color: black;
+}
+
+footer{
+  height: 30vh;
+}
+
+@media screen and (max-width: 900px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .App{
+    width: min-content;
+  }
+
+  .box{
+    margin-left: -15%;
+  }
+}
