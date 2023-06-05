@@ -54,7 +54,7 @@ const Sidebar = () =>{
                     smooth={true}
                     offset={-70}
                     duration={500}
-                ><FaSuitcase className='icone'/>Expèriences</Link>
+                ><FaSuitcase className='icone'/>Expériences</Link>
                 <Link
                     className='link'
                     activeClass="active"

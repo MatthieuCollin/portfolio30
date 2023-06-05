@@ -1,7 +1,35 @@
 import './index.scss';
-import {HiMail, HiPhone} from 'react-icons/hi'
+import {HiMail, HiPhone} from 'react-icons/hi';
+import emailjs, { send } from '@emailjs/browser';
+import {useRef} from 'react';
 
 const Contact = () =>{
+
+    const refForm = useRef();
+
+    const sendEmail = (e) =>{
+        e.preventDefault();
+
+        console.log(e.target);
+        
+        emailjs
+        .sendForm(
+            'service_pr9e348',
+            'template_pkxqntm',
+            refForm.current,
+            'W6NX56shliq8xGMgH',
+        )
+        .then(
+            ()=>{
+                alert('Message bien envoyé !')
+                window.location.reload(false)
+            },
+            ()=>{
+                alert('Erreur, veuillez ressayer.')
+            }
+        );
+    };
+
     return(
         <div id='contact' className="contact">
             <h2>Me contacter :</h2>
@@ -24,23 +52,16 @@ const Contact = () =>{
                     </div>
                 </div>
                 <div className="form">
-                    <form action="">
-                        <div className="names">
-                            <label htmlFor="firstName">Prénom</label>
-                            <input type="text" name="firstName" id="firstName" />
-
-                            <label htmlFor="lastName">Nom de famille</label>
-                            <input type="text" name="lastName" id="lastName" />
+                    <form ref={refForm} onSubmit={sendEmail}>
+                        <div class="field">
+                            <label for="from_name">Mail</label>
+                            <input type="email" className='mail' name="from_name" id="from_name" />
                         </div>
-                        <div className="subject">
-                            <label htmlFor="subject">Sujet</label>
-                            <input type="text" name="subject" id="subject" />
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea className='text' name="message" id="message" cols={30} />
                         </div>
-                        <div className="text">
-                            <label htmlFor="text">Votre Message</label>
-                            <textarea name="text" id="text" rows={20}></textarea>
-                        </div>
-                        <input type="submit" value="Envoyez le message" />
+                        <input type="submit" id="button" value="Envoyer" />
                     </form>
                 </div>
             </div>

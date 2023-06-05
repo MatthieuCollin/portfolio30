@@ -33,13 +33,13 @@ button {
 }
 
 h2{
-  font-size: 42px;
-  border-bottom: 5px solid #149ddd;
+  font-size: 2vw;
+  border-bottom: 0.4vw solid #149ddd;
   width: fit-content;
 }
 
 p{
-  font-size: 24px;
+  font-size: 1vw;
 }
 
 .separateur{
@@ -51,7 +51,7 @@ p{
 
 .separateur  .bar{
   width: 80%;
-  height: 3px;
+  height: 0.2vw;
   background-color: black;
 }
 
@@ -60,20 +60,26 @@ footer{
 }
 
 @media screen and (max-width: 900px) {
-
-  body{
-    overflow-x: hidden;
-  }
-
   .sidebar {
     display: none;
   }
 
   .App{
-    width: min-content;
+    background-size: auto;
+    background-position-x: center;
+    background-image: url('./assets/img/banniere2-phone.jpeg');
+
   }
 
+  h2{
+    font-size: 10vw;
+    margin: 1%;
+  }
+
+
   .box{
-    margin-left: -15%;
+    margin-left: 0%;
+    overflow-x: hidden;
+    width: 100vw;
   }
 }

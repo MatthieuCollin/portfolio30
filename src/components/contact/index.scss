@@ -26,12 +26,12 @@
             .mail{
                 height: 20%;
                 padding: 5%;
-                font-size: 22px;
+                font-size: 1vw;
                 display: flex;
                 align-items: center;
                 
                 .icon{
-                    font-size: 80px;
+                    font-size: 4vw;
                     background-color: #ecf5ff;
                     padding: 5%;
                     border-radius: 50%;
@@ -60,7 +60,7 @@
             
             /* Style pour les champs de saisie */
             input[type="text"],
-            textarea {
+            textarea, .mail {
                 height: 10%;
                 width: 100%;
                 padding: 0.5rem;
@@ -87,9 +87,31 @@
             .names,
             .subject,
             .text {
+                height: 300px;
                 margin-bottom: 1rem;
             }
         }
     }
+}
 
+@media screen and (max-width: 900px) {
+    .contact{
+
+        p{
+            font-size: 4vw;
+        }
+        .contactInfo{
+            flex-direction: column;
+            .content{
+                margin: 1%;
+                width: 95%;
+            }
+
+            .form{
+                width: 95%;
+                margin: 1%;
+                padding: 10%;
+            }
+        }
+    }
 }

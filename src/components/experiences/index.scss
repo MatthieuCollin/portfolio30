@@ -7,10 +7,12 @@
         margin: 1%;
         height: 90%;
         h2{
+
             margin: 1%;
         }
 
         p{
+            font-size: 1vw;
             margin: 1%;
         }
 
@@ -38,7 +40,7 @@
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
                 .icons{
-                    font-size: 100px;
+                    font-size: 5vw;
                 }
 
                 .html{
@@ -78,11 +80,9 @@
 
     .jobs {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
 
-        
-    
+ 
         .companies, .schools {
             width: 48%;
             display: flex;
@@ -91,32 +91,35 @@
     
         .company, .school {
             margin: 1%;
-
             background-color: #fff;
+            height: 300px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+            h2{
+                margin: 10%;
+            }
     
             h3 {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                font-size: 32px;
+                font-size: 1.5vw;
         
                 
         
-                p {
-                    font-size: 24px;
-                    color: #999;
-                    margin: 0;
-                }
+                    p {
+                        font-size: 1vw;
+                        color: #999;
+                        margin: 0;
+                    }
                 }
         
                 .content {
-                    margin-left: 1%;
                     display: flex;
                     align-items: center;
-                    justify-content: space-around;
+                    justify-content: space-between;
 
                         .skillsJob{
                             display: flex;
@@ -124,12 +127,12 @@
                         }
 
                         img {
-                            height: 250px;
+                            height: 200px;
                         }
                 
                         p {
                             margin: 10px 0;
-                            font-size: 24px;
+                            font-size: 1vw;
                             display: flex;
                             align-items: center;
                 
@@ -142,76 +145,55 @@
             }
         }
     }
-    
+}
 
-    /* .jobs{
-        width: 100%;
-        margin: auto;
-        padding: 1%;
-        display: flex;
-        justify-content: space-evenly;
-
-        img{
-            width: 100px;
-        }
-
-        .yBar{
-            width: 10px;
-            background-color: #00758F;
-            border-radius: 10px;
-        }
-
-        h3{
-            font-size: 38px;
-        }
-
-        .companies, .schools{
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            padding: 1%;
-            h2{
-                font-size: 56px;
-                
-            }
-        }
+@media screen and (max-width: 900px) {
+    .experiences{
         
-        .company, .school{
-            padding: 1%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            list-style: none;
-
-            h3{
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap ;
-            }
-
+        .skills{
+            margin: 1%;
             p{
-                font-weight: 100;
-                margin-left: 10%;
+                font-size: 4vw;
             }
-            
             .content{
-                height: 15%;
-                margin: 5%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }
+                .skill{
+                    width: 40%;
+                    .icons{
+                        font-size: 20vw;
+                    }
 
-            p{
-                display: flex;
-                align-items: center;
-                font-size: 28px;
-
-                .arrow{
-                    color: #149ddd;
+                    p{
+                        font-size: 4vw;
+                    }
                 }
             }
         }
-    } */
+
+        .jobs{
+            flex-direction: column;
+            align-items: center;
+            .companies, .schools{
+                width: 95%;
+                .company, .school{
+                    h3{
+                        font-size: 8vw;
+                        p{
+                            font-size: 2vw;
+                        }
+                    }
+
+                    .content {
+                            img {
+                                height: 30vw;
+                            }
+                    
+                            p {
+                                font-size: 3vw;                       
+                            }
+                        }
+                    
+                }
+            }
+        }
+    }
 }

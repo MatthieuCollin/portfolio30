@@ -4,7 +4,7 @@ import {IoLogoCss3, IoLogoJavascript, IoLogoNodejs} from 'react-icons/io'
 import {FaReact, FaPhp, FaSymfony} from 'react-icons/fa'
 import { MdArrowForwardIos } from 'react-icons/md'
 import {SiMysql} from 'react-icons/si'
-import { logoTips } from '../../assets/img'
+import { FacCaen, dotnet, laposte, logoTips, scholarfab } from '../../assets/img'
 
 const Experiences = () =>{
     const skills = [
@@ -57,66 +57,64 @@ const Experiences = () =>{
             ]
         },
         {
-            name :'TIPS',
-            duration: 'Janvier 2023 à Juin 2023',
+            name :'DotNet@Home',
+            duration: 'Avril 2022 à Mai 2022',
             location: '14000 CAEN',
+            img: dotnet,
             tasks: [
-                'Réalisation de cahier des charges',
-                'Réalisation d`une maquette de site web sur Figma',
-                'Réalisation d`un projet Symfony',
+                'Réalisation d`un site web (HTML, CSS, JS)`',
                 'Réalisation d`une base de données (MysSql)',
-                'Manipulation d`une API'
+                'Réalisation d`une API REST (Node.js)'
             ]
         },
         {
-            name :'TIPS',
-            duration: 'Janvier 2023 à Juin 2023',
+            name :'La Poste',
+            duration: 'Aôut 2022 à Octobre 2022',
             location: '14000 CAEN',
+            img: laposte,
             tasks: [
-                'Réalisation de cahier des charges',
-                'Réalisation d`une maquette de site web sur Figma',
-                'Réalisation d`un projet Symfony',
-                'Réalisation d`une base de données (MysSql)',
-                'Manipulation d`une API'
+                'Oblitération de courrier',
+                'Trie du courrier',
+                'Préparation de chantier',
             ]
         }
     ];
 
     const schools = [
         {
-            name :'TIPS',
-            duration: 'Janvier 2023 à Juin 2023',
-            location: '14000 CAEN',
+            name :'Scholar Fab',
+            duration: 'Octobre 2023 à Juin 2023',
+            location: '76000 Le Havre',
+            img: scholarfab,
             tasks: [
-                'Réalisation de cahier des charges',
-                'Réalisation d`une maquette de site web sur Figma',
-                'Réalisation d`un projet Symfony',
-                'Réalisation d`une base de données (MysSql)',
-                'Manipulation d`une API'
+                'Formation : DISII (Développeur Intégrateur de Solutions Intranet et Internet)',
+                'Niveau : Bac +2',
+                'Domaine : Informatique',
+                `Compétences obtenues : Javascript, Php, React, Symfony, Linux`
             ]
         },
         {
-            name :'TIPS',
-            duration: 'Janvier 2023 à Juin 2023',
+            name :'Scholar Fab',
+            duration: 'Décembre 2021 à Mai 2022',
             location: '14000 CAEN',
+            img: scholarfab,
             tasks: [
-                'Réalisation de cahier des charges',
-                'Réalisation d`une maquette de site web sur Figma',
-                'Réalisation d`un projet Symfony',
-                'Réalisation d`une base de données (MysSql)',
-                'Manipulation d`une API'
+                'Formation : SPAMIN (Se Préparer aux Métiers de l`Informatique et du Numérique)',
+                'Niveau : Bac',
+                'Domaine : Informatique',
+                `Compétences obtenues : HTML, CSS, Javascript, Linux`
             ]
         },
         {
-            name :'TIPS',
-            duration: 'Janvier 2023 à Juin 2023',
+            name :'Université de Caen',
+            duration: 'Septembre 2021 à Mai 2021',
             location: '14000 CAEN',
+            img: FacCaen,
             tasks: [
-                'Réalisation de cahier des charges',
-                'Réalisation d`une maquette de site web sur Figma',
-                'Réalisation d`un projet Symfony',
-                'Réalisation d`une base de données (MysSql)',
-                'Manipulation d`une API'
+                'Formation : LEA (Langues Étrangères appliquées)',
+                'Niveau : Bac+1',
+                'Domaine : Langues',
+                `Compétences obtenues : HTM, CSS, Anglais`
             ]
         }
     ];
@@ -124,9 +122,9 @@ const Experiences = () =>{
 
     return(
         <div id='experiences' className="experiences">
-            <h2>Expèriences</h2>
+            <h2>Expériences</h2>
             <div className="skills">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing ept. Esse error perspiciatis quos molestiae delectus quis aut, vept id quisquam culpa facere magni iusto, minus beatae, earum quibusdam exercitationem ipsa voluptates.</p>
+                <p>Ces projets m'ont permis de développer plusieurs compétences, notamment :</p>
                 <h2>Compétences</h2>
                 <div className="content">
                     {skills.map((skillData, index)=>{
@@ -159,18 +157,18 @@ const Experiences = () =>{
                                             )
                                         })}
                                     </div>
-                                    <img src={logoTips} alt="" />
+                                    <img src={job.img} alt="" />
                                 </div>
                             </div>
                         );
                     })}          
                 </div>
                 <div className="yBar"></div>
-                <div className="schools">
+                <div className="companies">
                     <h2>Écoles</h2>
                     {schools.map((school, index)=>{
                         return(
-                            <div key={index} className="school">
+                            <div key={index} className="company">
                                 <h3 key={index}>
                                     {school.name} 
                                     <p>{school.duration} - {school.location}</p>
@@ -183,7 +181,7 @@ const Experiences = () =>{
                                             )
                                         })}
                                     </div>
-                                    <img src={logoTips} alt="logo tips" />
+                                    <img src={school.img} alt="logo tips" />
                                 </div>
                             </div>
                         );

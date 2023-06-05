@@ -18,22 +18,14 @@
 }
 
 @media screen and (max-width: 900px){
-    .homepage{
-        height: 100vh;
-        max-width: 100%;
-    
-        .presentation{
-            width: 20%;
-        }
-
-
+    .homepage{    
         h1{
-            font-size: 38px;
+            font-size: 16vw;
             font-weight: 1000;
         }
     
         h2{
-            font-size: 42px;
+            font-size: 8vw;
             border-bottom: 5px solid #149ddd;
             width: fit-content;
         }

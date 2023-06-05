@@ -4,26 +4,6 @@ import './index.scss'
 
 const Profil = () =>{
 
-    const persons = [
-        {
-            profil: nico,
-            name : "Nicolas Lambert",
-            summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni nulla dolorum molestiae, laborum, fugiat optio, iusto quisquam cum quae dignissimos magnam distinctio vero qui ut labore nobis tenetur. Harum, nemo."
-        },
-        {
-            profil: nico,
-            name : "Nicolas Lambert",
-            summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni nulla dolorum molestiae, laborum, fugiat optio, iusto quisquam cum quae dignissimos magnam distinctio vero qui ut labore nobis tenetur. Harum, nemo."
-        },
-        {
-            profil: nico,
-            name : "Nicolas Lambert",
-            summary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni nulla dolorum molestiae, laborum, fugiat optio, iusto quisquam cum quae dignissimos magnam distinctio vero qui ut labore nobis tenetur. Harum, nemo."
-        },
-    ];
-
-
-
     return(
         <div id='profil' className='profilBox'>
             <h2 >PROFIL</h2>
@@ -33,38 +13,24 @@ const Profil = () =>{
                         <img src={profil} alt="profil" />
                         <div className="details">
                             <h3> Développeur web, Javascript/PHP</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate quos porro odio debitis incidunt consequatur reprehenderit rerum accusantium dicta, omnis qui dolorem voluptas quasi commodi excepturi maiores mollitia consectetur sunt?</p>
+                            <p> 👋 Salut ! Je suis un développeur web passionné, spécialisé en langages informatiques tels que 🐘 PHP, 🌐 JS, 🚀 React et 🎶 Symfony. Actuellement en formation DISII, je suis en stage chez TIPS et prépare mon avenir avec la formation CSI. Je suis curieux, social, patient et j'aime partager mes connaissances. Vous pouvez jeter un œil à mon site web 🌐 devwebcollin.fr pour en savoir plus sur mes projets.</p>
                             <ul>
-                                <li> <MdArrowForwardIos className='arrow'/> Age :<span>21 ans</span></li>
-                                <li> <MdArrowForwardIos className='arrow'/> Ville :<span>Caen</span> </li>
-                                <li> <MdArrowForwardIos className='arrow'/> École :<span>Scholar fab</span></li>
-                                <li> <MdArrowForwardIos className='arrow'/>  Mail :<span>matthcollin6@gmail.com</span> </li>
+                                <li> <MdArrowForwardIos className='arrow'/> Age : <span>21 ans</span></li>
+                                <li> <MdArrowForwardIos className='arrow'/> Ville : <span>Caen</span> </li>
+                                <li> <MdArrowForwardIos className='arrow'/> École : <span>Scholar fab</span></li>
+                                <li> <MdArrowForwardIos className='arrow'/>  Mail : <span>matthcollin6@gmail.com</span> </li>
                                 <li> <MdArrowForwardIos className='arrow'/>  Télephone :<span> 06.23.50.77.61</span> </li>
-                                <li> <MdArrowForwardIos className='arrow'/>  Site Web :<span>www.devwebcollin.fr</span> </li>
+                                <li> <MdArrowForwardIos className='arrow'/>  Site Web : <span>www.devwebcollin.fr</span> </li>
                             </ul>
                             </div>
                         </div>
                     <p>
-                            En tant que développeur web, je suis quelqu'un de sociable, curieux et patient. Ces talents me permettent de travailler efficacement en équipe, de m'adapter rapidement aux nouvelles technologies et de résoudre les problèmes avec patience et persévérance.
-                            Dans cette optique, j'ai eu la chance de travailler avec des professionnels exceptionnels, qui m'ont appris beaucoup de choses sur la programmation, la conception de sites web et la gestion de projets. Je suis fier de pouvoir compter sur leurs recommandations pour attester de mon expertise et de mes compétences.
+                    J'ai découvert le développement lors de la formation SPAMIN (Se Préparer Aux Métiers de l'Informatique et du Numérique) au centre ADEN de Caen. Cette formation m'a permis de participer à divers ateliers tout au long des 6 mois du cursus. De plus, j'ai eu l'opportunité d'effectuer un stage d'un mois en tant qu'analyste développeur chez Dot Net @ Home. Cette expérience m'a conforté dans mon choix de poursuivre dans ce domaine, ce qui m'a conduit à m'inscrire en formation DISII (Développeur intégrateur de solutions Intranet et Internet) au Havre.
                     </p>
-                </div>
-            </div>
-            <div className="separateur">
-                <div className="bar"></div>
-            </div>
-            <div className="reco">
-                <h2>Voici un retour des personne avec qui j'ai pu travailler: </h2>
-                <div className="content">
-                    {persons.map((person, index)=>{
-                        return(
-                            <div className="person">
-                                <img src={person.profil} alt="profil" />
-                                <h3>{person.name}</h3>
-                                <p>{person.summary}</p>
-                            </div>
-                        )
-                    })}
+                    <br></br>
+                    <p>
+                    Au cours de cette formation, j'ai pu échanger avec des professionnels du métier, approfondir mes compétences et acquérir de l'expérience grâce à un stage de 3 mois. Ainsi, il me semble tout naturel de continuer ma progression en m'orientant vers un bac +3 CSI (concepteur d'information système). Cependant, cette formation est disponible uniquement en alternance, ce qui explique pourquoi je suis actuellement à la recherche d'une entreprise pour poursuivre mon parcours.                   
+                    </p>
                 </div>
             </div>
         </div>

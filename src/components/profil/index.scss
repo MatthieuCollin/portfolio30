@@ -1,5 +1,4 @@
 .profilBox{
-    width: 100%;
     background-color: white;
     color: black;
     padding: 1%;
@@ -21,9 +20,15 @@
         flex-wrap: wrap;
         
         .informations{
+            height: fit-content;
+            overflow: hidden;
+            display: flex;
+
+            
+
             img{
-                width: 1000px;
-                border: 5px solid #149ddd;
+                width: 60vw;
+                border: 0.4vw solid #149ddd;
                 align-self: flex-start;
                 border-radius: 10px;
                 margin: 1%;
@@ -32,14 +37,14 @@
             .details{
                 display: flex;
                 flex-direction: column;
+                p{
+                    text-align: justify;
+                }
+
             }
 
-            height: fit-content;
-            overflow: hidden;
-            display: flex;
-
             h3{
-                font-size: 36px
+                font-size: 2vw
             }
 
             ul{
@@ -47,12 +52,11 @@
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
-                height: 2   0vh;
                 padding: 1%;
 
                 li{
                     margin: 1%;
-                    font-size: 24px;
+                    font-size: 1vw;
                     font-weight: 1000;
 
                     span{
@@ -67,15 +71,17 @@
 
             
         }
-    }
-
-    
-
-    p{
-        font-size: 24px;
+        p{
+            font-size: 1vw;
+            text-align: justify;
+        }
     }
 
     .reco{
+        h2{
+            font-size: 1.5vw;
+        }
+        
         .content{
             margin: 1%;
             display: flex;
@@ -86,7 +92,7 @@
             .person{
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                 padding: 1%;
-                width: 30%;
+                width: 25vw;
                 border-radius: 10px;
                 display: flex;
                 flex-direction: column;
@@ -94,7 +100,7 @@
                 justify-content: space-around;
                 
                 img{
-                    border: 5px solid black;
+                    border: 0.4vw solid black;
                     border-radius: 50%;
                     width: 60%;
                     margin: 1%;
@@ -102,11 +108,12 @@
 
                 h3{
                     margin: 1%;
-                    font-size: 34px;
+                    font-size: 2vw;
                 }
 
                 p{
                     margin: 1%;
+                    font-size: 1vw;
                     text-align: justify;
                 }
             }
@@ -117,6 +124,68 @@
 
 @media screen and (max-width: 900px) {
     .profilBox{
-        width: 100%;
+        width: 100vw;
+        .about{
+            .informations{
+                flex-direction: column;
+                align-items: center;
+
+                ul{    
+                    margin: 1%;
+                    li{
+                        margin: 1%;
+                        font-size: 5vw;
+                    }
+                }
+                
+                img{
+                    width: 95vw;
+                }
+
+                h3{
+                    margin: 2%;
+                    font-size: 8vw;
+                }
+
+                p{
+                    margin: 2%;
+                    font-size: 5vw;
+                }
+                
+            }
+            p{
+                margin: 2%;
+                font-size: 5vw;
+            }
+        }
+        .reco{
+            h2{
+                font-size: 8vw;
+                border: none;
+            }
+            
+            .content{
+                justify-content: center;
+                .person{
+                    margin: 1%;
+                    width: 90vw;
+                    
+                    img{
+                        width: 60vw;
+                    }
+    
+                    h3{
+                        margin: 1%;
+                        font-size: 8vw;
+                    }
+    
+                    p{
+                        margin: 1%;
+                        font-size: 4vw;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
     }
 }
