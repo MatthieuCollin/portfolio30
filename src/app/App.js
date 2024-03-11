@@ -5,19 +5,22 @@ import Portfolio from '../components/portfolio';
 import Experiences from '../components/experiences';
 import Contact from '../components/contact';
 import Footer from '../components/footer';
+import fetchApi from '../functions/fetchApi';
+import { useEffect, useState } from 'react';
 
 function App() {
 
+ 
   return (
     <div className="App">
-      <Sidebar />
+      <Sidebar key="103"/>
       <div className="box">
-        <Homepage/>
+        <Homepage key="1"/>
         <Profil />
-        <Portfolio/>
-        <Experiences />
-        <Contact/>
-        <Footer />
+        <Portfolio key="3"/>
+        <Experiences key="5" />
+        <Contact key="8"/>
+        <Footer key="11"/>
       </div>
     </div>
   );

@@ -129,7 +129,7 @@ const Experiences = () =>{
                 <div className="content">
                     {skills.map((skillData, index)=>{
                         return(
-                            <div className="skill">
+                            <div  key={index + "skill"} className="skill">
                                 {skillData.icone}
                                 {skillData.skill}
                             </div>
@@ -143,14 +143,14 @@ const Experiences = () =>{
                     <h2>Jobs</h2>
                     {jobs.map((job, index)=>{
                         return(
-                            <div key={index} className="company">
+                            <div key={index + "comapny"} className="company">
                                 <h3 key={index}>
                                     {job.name} 
                                     <p>{job.duration} - {job.location}</p>
                                 </h3>
                                 
-                                <div key={index} className="content">
-                                    <div className='skillsJob'>
+                                <div key={index + "comapnyContent"} className="content">
+                                    <div key={index + "skilljob"} className='skillsJob'>
                                         {job.tasks.map((task,index)=>{
                                             return(
                                                     <p key={index}><MdArrowForwardIos className='arrow'/>{task}</p>
@@ -168,13 +168,13 @@ const Experiences = () =>{
                     <h2>Écoles</h2>
                     {schools.map((school, index)=>{
                         return(
-                            <div key={index} className="company">
-                                <h3 key={index}>
+                            <div key={index + "school"} className="company">
+                                <h3 key={index + "title"}>
                                     {school.name} 
                                     <p>{school.duration} - {school.location}</p>
                                 </h3>
-                                <div key={index} className="content">
-                                    <div className='skillsJob'>
+                                <div key={index + "schoolContent"} className="content">
+                                    <div key={index + "skillSchool"} className='skillsJob'>
                                         {school.tasks.map((task,index)=>{
                                             return(
                                                     <p key={index}><MdArrowForwardIos className='arrow'/>{task}</p>
