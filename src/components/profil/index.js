@@ -24,13 +24,7 @@ const Profil = () =>{
                             </ul>
                             </div>
                         </div>
-                    <p>
-                    J'ai découvert le développement lors de la formation SPAMIN (Se Préparer Aux Métiers de l'Informatique et du Numérique) au centre ADEN de Caen. Cette formation m'a permis de participer à divers ateliers tout au long des 6 mois du cursus. De plus, j'ai eu l'opportunité d'effectuer un stage d'un mois en tant qu'analyste développeur chez Dot Net @ Home. Cette expérience m'a conforté dans mon choix de poursuivre dans ce domaine, ce qui m'a conduit à m'inscrire en formation DISII (Développeur intégrateur de solutions Intranet et Internet) au Havre.
-                    </p>
-                    <br></br>
-                    <p>
-                    Au cours de cette formation, j'ai pu échanger avec des professionnels du métier, approfondir mes compétences et acquérir de l'expérience grâce à un stage de 3 mois. Ainsi, il me semble tout naturel de continuer ma progression en m'orientant vers un bac +3 CSI (concepteur d'information système). Cependant, cette formation est disponible uniquement en alternance, ce qui explique pourquoi je suis actuellement à la recherche d'une entreprise pour poursuivre mon parcours.                   
-                    </p>
+                 
                 </div>
             </div>
         </div>
