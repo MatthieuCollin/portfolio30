@@ -1,10 +1,10 @@
-import Sidebar from '../components/sidebar';
-import Homepage from '../components/homepage';
-import Profil from '../components/profil';
-import Portfolio from '../components/portfolio';
-import Experiences from '../components/experiences';
-import Contact from '../components/contact';
-import Footer from '../components/footer';
+import Sidebar from '../pages/sidebar';
+import Homepage from '../pages/homepage';
+import Profil from '../pages/profil';
+import Portfolio from '../pages/portfolio';
+import Experiences from '../pages/experiences';
+import Contact from '../pages/contact';
+import Footer from '../pages/footer';
 import fetchApi from '../functions/fetchApi';
 import { useEffect, useState } from 'react';
 
