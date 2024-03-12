@@ -6,41 +6,8 @@ import { MdArrowForwardIos } from 'react-icons/md'
 import {SiMysql} from 'react-icons/si'
 import { FacCaen, dotnet, laposte, logoTips, scholarfab } from '../../assets/img'
 
-const Experiences = () =>{
-    const skills = [
-        {
-            icone: <AiFillHtml5 className='icons html'/>,
-            skill : <p>HTML5</p>,
-        },
-        {
-            icone: <IoLogoCss3 className='icons css'/>,
-            skill: <p>CSS3</p>
-        },
-        {
-            icone:<IoLogoJavascript className='icons js'/>,
-            skill: <p>JavaScript</p>
-        },
-        {
-            icone:<IoLogoNodejs className='icons nodejs'/>,
-            skill: <p>node.js</p>
-        },
-        {
-            icone:<FaReact className='icons react'/>,
-            skill :<p>React</p>
-        },
-        {
-            icone:<FaPhp className='icons php'/>,
-            skill: <p>php</p>
-        },
-        {
-            icone: <FaSymfony className='icons symfony'/>,
-            skill: <p>Symfony</p>
-        },
-        {
-            icone:<SiMysql className='icons sql'/>,
-            skill: <p>Sql</p>
-        }
-    ];
+const Experiences = (props) =>{
+    let skills = props.skills;
 
     const jobs = [
         {
@@ -130,8 +97,8 @@ const Experiences = () =>{
                     {skills.map((skillData, index)=>{
                         return(
                             <div  key={index + "skill"} className="skill">
-                                {skillData.icone}
-                                {skillData.skill}
+                                <img  src={`data:image/svg+xml;base64,${skillData.image}`} />
+                                {skillData.name}
                             </div>
                         )
                     })}
