@@ -17,7 +17,7 @@ const Profil = (props) => {
                     <div className="informations">
                         <img src={profil} alt="profil" />
                         {data ?   <div className="details">
-                            <h3> {data.job}</h3>
+                            <h3> {data.firstname} {data.lastname}</h3>
                             <p> {data.description}</p>
                             <ul>
                                 <li> <MdArrowForwardIos className='arrow'/> Age : <span>{data.age} ans</span></li>

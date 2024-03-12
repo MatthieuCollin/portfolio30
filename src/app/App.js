@@ -17,10 +17,12 @@ function App() {
     },[])
     
     async function getData(){
-        let fetch = await fetchApi("profils");
+        let profil = await fetchApi("profils");
+        let works = await fetchApi("works");
 
         setData({
-          profil: fetch["hydra:member"][0],
+          profil: profil["hydra:member"][0],
+          works: works["hydra:member"],
           state:true
         });
     };
