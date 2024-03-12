@@ -7,10 +7,11 @@ import Contact from '../pages/contact';
 import Footer from '../pages/footer';
 import fetchApi from '../functions/fetchApi';
 import { useEffect, useState } from 'react';
+import Loader from '../components/loader';
 
 function App() {
 
-  const [data, setData] = useState({profil: null, state: null});
+  const [data, setData] = useState({profil: null,works: null, state: false});
 
     useEffect(()=>{
         getData();
@@ -36,12 +37,12 @@ function App() {
     <div className="box">
       <Homepage profil={data.profil} key="1"/>
       <Profil profil={data.profil}/>
-      <Portfolio key="3"/>
+      <Portfolio works={data.works} key="3"/>
       <Experiences key="5" />
       <Contact profil={data.profil} key="8"/>
       <Footer key="11"/>
     </div>
-  </div> :<></>}
+  </div> :<Loader />}
   </>
 
   );

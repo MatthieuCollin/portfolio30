@@ -12,6 +12,7 @@ import portfolio from './sitePortfolio.png'
 import scholarfab from './adenLogo.jpeg'
 import laposte from './laposte.png'
 import FacCaen from './facCaen.png'
+import loader from './loader.png'
 
 export {
     profil,
@@ -27,5 +28,6 @@ export {
     siteKaraoke,
     portfolio,
     laposte,
-    FacCaen
+    FacCaen,
+    loader
 }

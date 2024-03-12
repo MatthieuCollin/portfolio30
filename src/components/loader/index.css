@@ -1,0 +1,32 @@
+.loader{
+    height: 95vh;
+    width: 100%;
+    display: flex;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+        transition: 1s;
+
+    }
+    100%{
+        transform: rotate(360deg);
+        transition: 1s;
+
+
+    }
+}
+
+.loader img{
+    transition: 1s;
+
+    width: 20%;
+    height: auto;
+    margin: auto;
+    animation: rotate 2s linear infinite;
+}
+
+
+
+

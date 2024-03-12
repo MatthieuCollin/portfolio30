@@ -1,50 +1,8 @@
-import { frontMentor, siteKaraoke, sitecd, portfolio, ancienSite } from '../../assets/img';
-import { useState } from 'react';
 import './index.scss';
-import { useEffect } from 'react';
 
-const Portfolio = () =>{
+const Portfolio = (props) =>{
 
-    let siteCd = require('../../assets/img/sitecd.png')
-
-    const projects = [
-        {
-            style:{
-                backgroundImage: `url("${siteCd}")`,
-            },
-            github: "https://github.com/MatthieuCollin/cd-site",
-            link:"https://www.cdmatthieu.online"
-        },
-        {
-            style:{
-                backgroundImage: `url(${siteKaraoke})`,
-            },
-            github: "https://github.com/MatthieuCollin/karaoke",
-            link:""
-        },
-        {
-            style:{
-                backgroundImage: `url(${frontMentor})`,
-            },
-            github: "https://github.com/MatthieuCollin/Frontmentor-Dashboard",
-            link:"https://www.cdmatthieu.online"
-        },
-        {
-            style:{
-                backgroundImage: `url(${portfolio})`,
-            },
-            github: "https://github.com/MatthieuCollin/portfolio30",
-            link:""
-        },
-        {
-            style:{
-                backgroundImage: `url(${ancienSite})`,
-            },
-            github: "https://github.com/MatthieuCollin/portfolio20",
-            link:"https://www.devwebcollin.fr"
-        }
-    ]
-
+    let data = props.works;
 
     return(
         <div id='portfolio' className="portfolio">
@@ -52,12 +10,12 @@ const Portfolio = () =>{
             <div className="content">
                 <p>Voici les travaux que j'ai pu réaliser au cours de mon parcours :</p>
                 <div className="works"> 
-                    {projects.map((project, index)=>{
+                    {data.map((project, index)=>{
                         return(
-                            <div style={project.style} className="work cd">
+                            <div style={{backgroundImage: `url("data:image/png;base64,${project.image}")`}} className="work cd">
                                 <div className='links'>
-                                    <a href={project.github} target="_blank">Github</a>
-                                    <a href={project.link} target="_blank">Site</a>
+                                    <a href={project.githubLink} target="_blank">Github</a>
+                                    <a href={project.websiteLink} target="_blank">Site</a>
                                 </div>               
                             </div>
                         )
