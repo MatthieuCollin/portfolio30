@@ -1,11 +1,14 @@
 import './index.scss'
 
-const Homepage = () =>{
+const Homepage = (props) =>{
+
+    let data = props.profil;
+    
     return(
         <div id='homepage' className="homepage">
             <div className='presentation'>
-                <h1 >COLLIN Matthieu</h1>
-                <h2>Développeur web</h2>
+                <h1>{data.lastname} {data.firstname}</h1>
+                <h2>{data.job}</h2>
             </div>
         </div>
     )

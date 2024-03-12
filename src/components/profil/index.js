@@ -4,21 +4,10 @@ import './index.scss'
 import { useEffect, useState } from 'react';
 import fetchApi from '../../functions/fetchApi';
 
-const Profil = () => {
+const Profil = (props) => {
 
-    const [data, setData] = useState();
-    useEffect(()=>{
-        getData();
-    },[])
     
-    async function getData(){
-        let fetch = await fetchApi("profils");
-
-        setData(fetch["hydra:member"][0]);
-    };
-    console.log(data);
-    
-    
+    let data = props.profil;
     
     return(
         <div id='profil' className='profilBox'>
@@ -37,10 +26,9 @@ const Profil = () => {
                                 <li> <MdArrowForwardIos className='arrow'/>  Télephone :<span> {data.phone}</span> </li>
                                 <li> <MdArrowForwardIos className='arrow'/>  Site Web : <span>www.devwebcollin.fr</span> </li>
                             </ul>
-                            </div>: <></>}
-                      
+                            </div>
+                            : <></>}
                         </div>
-                 
                 </div>
             </div>
         </div>

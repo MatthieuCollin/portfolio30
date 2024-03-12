@@ -3,9 +3,11 @@ import {HiMail, HiPhone} from 'react-icons/hi';
 import emailjs, { send } from '@emailjs/browser';
 import {useRef} from 'react';
 
-const Contact = () =>{
+const Contact = (props) =>{
 
     const refForm = useRef();
+
+    let data = props.profil;
 
     const sendEmail = (e) =>{
         e.preventDefault();
@@ -40,16 +42,16 @@ const Contact = () =>{
                 <div className="content">
                     <div className="mail">
                         <HiMail className='icon'></HiMail>
-                        <p><span>Mail: </span>matthcollin6@gmail.com</p>
+                        <p><span>Mail: </span>{data.mail}</p>
                     </div>
                     <div className="mail">
                         <HiPhone className='icon'></HiPhone>
-                        <p><span>Téléphone: </span>06.23.50.77.61</p>
+                        <p><span>Téléphone: </span>{data.phone}</p>
                     </div>
                     <div className="mail">
-                        <HiMail className='icon'></HiMail>
-                        <p><span>Mail: </span>matthcollin6@gmail.com</p>
+                        
                     </div>
+                  
                 </div>
                 <div className="form">
                     <form ref={refForm} onSubmit={sendEmail}>
