@@ -2,6 +2,9 @@
     height: 95vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes rotate {
@@ -17,6 +20,22 @@
 
     }
 }
+
+.progress-bar{
+    height: 30px;
+    border: 1px solid black;
+    width: 40vw;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.progress{
+    height: 30px;
+    background-color: #149ddd;
+    transition: 0.5s ease-in;
+    border-radius: 10px;
+}
+
 
 .loader img{
     transition: 1s;
