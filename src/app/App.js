@@ -54,7 +54,7 @@ function App() {
     <>
     {data.state ?  
     <div onLoad={(e)=> e.currentTarget.classList.add("loaded")} className={`App`}>
-      <Sidebar key="103"/>
+      <Sidebar profil={data.profil} key="103"/>
       <div className="box">
         <Homepage profil={data.profil} key="1"/>
         <Profil profil={data.profil}/>

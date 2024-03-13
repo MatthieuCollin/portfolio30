@@ -4,14 +4,15 @@ import {FaHome, FaUser, FaSuitcase, FaMailBulk} from 'react-icons/fa'
 import {MdOutlineWebAsset} from 'react-icons/md'
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const Sidebar = () =>{
+const Sidebar = (props) =>{
 
+    let profilDate = props.profil
     
     return(
         <header className="sidebar">
             <div className="profil">
                 <img src={profil} alt="profil"  />
-                <h2>Collin Matthieu</h2>
+                <h2>{profilDate.lastname} {profilDate.firstname}</h2>
                 <div className="socials">
                     <a target="_blank" href={`${process.env.REACT_APP_LINKEDIN_LINK}`}><SiLinkedin className='icone'/></a>
                     <a target="_blank" href={`${process.env.REACT_APP_GITHUB_LINK}`}><SiGithub className='icone'/></a>
