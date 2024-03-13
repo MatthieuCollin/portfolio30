@@ -1,6 +1,5 @@
 import { erwan, melvin, nico, profil } from '../../assets/img';
 import {MdArrowForwardIos} from 'react-icons/md'
-import './index.scss'
 import { useEffect, useState } from 'react';
 import fetchApi from '../../functions/fetchApi';
 

@@ -1,3 +1,16 @@
+@import "./config.scss";
+
+@import "./components/institution/index.scss";
+@import "./components/project/index.scss";
+@import "./components/skill/index.scss";
+@import "./components/loader/index.scss";
+@import "./pages/contact/index.scss";
+@import "./pages/experiences/index.scss";
+@import "./pages/footer/index.scss";
+@import "./pages/homepage/index.scss";
+@import "./pages/portfolio/index.scss";
+@import "./pages/profil/index.scss";
+@import "./pages/sidebar/index.scss";
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 * {
@@ -42,7 +55,7 @@ button {
 
 h2{
   font-size: 2vw;
-  border-bottom: 0.4vw solid #149ddd;
+  border-bottom: 0.4vw solid $maincolor;
   width: fit-content;
 }
 

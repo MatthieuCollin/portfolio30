@@ -30,7 +30,7 @@
 
             img{
                 width: 60vw;
-                border: 0.4vw solid #149ddd;
+                border: 0.4vw solid $maincolor;
                 align-self: flex-start;
                 border-radius: 10px;
                 margin: 1%;
@@ -68,7 +68,7 @@
                     }
 
                     .arrow{
-                        color: #149ddd;
+                        color: $maincolor;
                     }
                 }
             }

@@ -1,6 +1,6 @@
 .contact{
     padding: 1%;
-    background-color: #ecf5ff;
+    background-color: $backgroundColorApp;
     color: black;
 
     p{
@@ -32,7 +32,7 @@
                 
                 .icon{
                     font-size: 4vw;
-                    background-color: #ecf5ff;
+                    background-color: $backgroundColorApp;
                     padding: 5%;
                     border-radius: 50%;
                 }
@@ -72,7 +72,7 @@
             
             /* Style pour le bouton d'envoi */
             input[type="submit"] {
-                background-color: #149ddd;
+                background-color: $maincolor;
                 color: white;
                 border: 3px solid black;
                 border-radius: 10px;

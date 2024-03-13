@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: #040b14;
+    background-color: $sidebarColor;
     width: 15vw;
     height: 100vh;
     position: fixed;
@@ -17,7 +17,7 @@
     img{
         width: 10vw;
         border-radius: 50%;
-        border: 10px solid #212431;
+        border: 10px solid #A8A9B4;
     }
 
     h2{
@@ -40,7 +40,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: #212431;
+            background-color: #A8A9B4;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -49,7 +49,7 @@
 
         a:hover{
             transition: 0.5s;
-            color: #149ddd;
+            color: $maincolor;
         }
     }
 
@@ -82,7 +82,7 @@
             color: white;
             .icone{
                 transition: 0.5s;
-                color: #149ddd;
+                color: $maincolor;
             }
         }
 
@@ -91,7 +91,7 @@
             color: white;
             .icone{
                 transition: 0.5s;
-                color: #149ddd;
+                color: $maincolor;
             }
         }
         

@@ -1,4 +1,3 @@
-import './index.scss';
 import {HiMail, HiPhone} from 'react-icons/hi';
 import emailjs, { send } from '@emailjs/browser';
 import {useRef} from 'react';

@@ -12,7 +12,7 @@
 
     h2{
         font-size: 42px;
-        border-bottom: 5px solid #149ddd;
+        border-bottom: 5px solid $maincolor;
         width: fit-content;
     }
 }
@@ -26,7 +26,7 @@
     
         h2{
             font-size: 8vw;
-            border-bottom: 5px solid #149ddd;
+            border-bottom: 5px solid $maincolor;
             width: fit-content;
         }
     }

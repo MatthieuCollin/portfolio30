@@ -1,6 +1,5 @@
 import dateRegex from "../../functions/dateRegex";
 import { MdArrowForwardIos } from "react-icons/md";
-import "./index.scss"
 
 const Institution = (props) =>{
     let institution = props.institution;

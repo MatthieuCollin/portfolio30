@@ -1,5 +1,4 @@
 import Project from '../../components/project';
-import './index.scss';
 
 const Portfolio = (props) =>{
 

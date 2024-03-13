@@ -3,7 +3,6 @@ import {SiLinkedin, SiGithub, SiPinterest} from 'react-icons/si';
 import {FaHome, FaUser, FaSuitcase, FaMailBulk} from 'react-icons/fa'
 import {MdOutlineWebAsset} from 'react-icons/md'
 import { Link, animateScroll as scroll } from "react-scroll";
-import './index.scss';
 
 const Sidebar = () =>{
 

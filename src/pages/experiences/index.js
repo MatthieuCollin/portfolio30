@@ -1,4 +1,3 @@
-import './index.scss'
 import {AiFillHtml5} from 'react-icons/ai'
 import {IoLogoCss3, IoLogoJavascript, IoLogoNodejs} from 'react-icons/io'
 import {FaReact, FaPhp, FaSymfony} from 'react-icons/fa'
