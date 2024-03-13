@@ -1,3 +1,4 @@
+import Project from '../../components/project';
 import './index.scss';
 
 const Portfolio = (props) =>{
@@ -12,12 +13,7 @@ const Portfolio = (props) =>{
                 <div className="works"> 
                     {data.map((project, index)=>{
                         return(
-                            <div key={index + "project"} style={{backgroundImage: `url("data:image/png;base64,${project.image}")`}} className="work cd">
-                                <div className='links'>
-                                    <a href={project.githubLink} target="_blank">Github</a>
-                                    <a href={project.websiteLink} target="_blank">Site</a>
-                                </div>               
-                            </div>
+                            <Project project={project} index={index} />
                         )
                     })}
                     
