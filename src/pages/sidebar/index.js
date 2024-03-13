@@ -10,7 +10,7 @@ const Sidebar = () =>{
     return(
         <header className="sidebar">
             <div className="profil">
-                <img src={profil} alt="profil" srcset="" />
+                <img src={profil} alt="profil"  />
                 <h2>Collin Matthieu</h2>
                 <div className="socials">
                     <a href=""><SiLinkedin className='icone'/></a>

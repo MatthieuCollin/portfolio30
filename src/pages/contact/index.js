@@ -55,12 +55,12 @@ const Contact = (props) =>{
                 </div>
                 <div className="form">
                     <form ref={refForm} onSubmit={sendEmail}>
-                        <div class="field">
-                            <label for="from_name">Mail</label>
+                        <div className="field">
+                            <label htmlFor="from_name">Mail</label>
                             <input type="email" className='mail' name="from_name" id="from_name" />
                         </div>
-                        <div class="field">
-                            <label for="message">Message</label>
+                        <div className="field">
+                            <label htmlFor="message">Message</label>
                             <textarea className='text' name="message" id="message" cols={30} />
                         </div>
                         <input type="submit" id="button" value="Envoyer" />

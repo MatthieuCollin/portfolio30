@@ -105,6 +105,8 @@ const Experiences = (props) =>{
     //     }
     // ];
 
+    console.log(schools)
+
 
     return(
         <div id='experiences' className="experiences">
@@ -139,7 +141,7 @@ const Experiences = (props) =>{
                                     <div key={index + "skilljob"} className='skillsJob'>
                                         {job.task.map((task,index)=>{
                                             return(
-                                                <p key={index}><MdArrowForwardIos className='arrow'/>{task}</p>
+                                                <p key={index}><MdArrowForwardIos className='arrow'/>{task.name}</p>
                                             )
                                         })}
                                     </div>
@@ -150,7 +152,7 @@ const Experiences = (props) =>{
                             </div>
                         );
                     })}          
-                </div>
+                </div>  
                 <div className="yBar"></div>
                 <div className="companies">
                     <h2>Écoles</h2>
@@ -165,7 +167,7 @@ const Experiences = (props) =>{
                                     <div key={index + "skillSchool"} className='skillsJob'>
                                         {school.task.map((task,index)=>{
                                             return(
-                                                    <p key={index}><MdArrowForwardIos className='arrow'/>{task}</p>
+                                                    <p key={index}><MdArrowForwardIos className='arrow'/>{task.name}</p>
                                             )
                                         })}
                                     </div>
