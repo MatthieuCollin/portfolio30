@@ -7,6 +7,7 @@ import dateRegex from '../../functions/dateRegex'
 import {SiMysql} from 'react-icons/si'
 import { FacCaen, dotnet, laposte, logoTips, scholarfab } from '../../assets/img'
 import Institution from '../../components/institution'
+import Skill from '../../components/skill'
 
 const Experiences = (props) =>{
     let skills = props.skills;
@@ -39,10 +40,7 @@ const Experiences = (props) =>{
                 <div className="content">
                     {skills.map((skillData, index)=>{
                         return(
-                            <div  key={index + "skill"} className="skill">
-                                <img  src={`data:image/svg+xml;base64,${skillData.image}`} />
-                                {skillData.name}
-                            </div>
+                            <Skill skillData={skillData} index={index} />
                         )
                     })}
                 </div>
