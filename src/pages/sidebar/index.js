@@ -6,6 +6,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import './index.scss';
 
 const Sidebar = () =>{
+
     
     return(
         <header className="sidebar">
@@ -13,9 +14,8 @@ const Sidebar = () =>{
                 <img src={profil} alt="profil"  />
                 <h2>Collin Matthieu</h2>
                 <div className="socials">
-                    <a href=""><SiLinkedin className='icone'/></a>
-                    <a href=""><SiGithub className='icone'/></a>
-                    <a href=""><SiPinterest className='icone'/></a>
+                    <a target="_blank" href={`${process.env.REACT_APP_LINKEDIN_LINK}`}><SiLinkedin className='icone'/></a>
+                    <a target="_blank" href={`${process.env.REACT_APP_GITHUB_LINK}`}><SiGithub className='icone'/></a>
                 </div>
             </div>
             <ul id='navbar'>
