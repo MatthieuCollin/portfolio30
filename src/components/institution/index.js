@@ -9,7 +9,7 @@ const Institution = (props) =>{
     <div key={index + "institution"} className="company">
     <h3 key={index + "title"}>
         {institution.name} 
-        <p>Du {dateRegex(institution.beginDate)} au {dateRegex(institution.endDate)}</p>
+        <p>Du {dateRegex(institution.beginDate)} au {institution.endDate ? dateRegex(institution.endDate) : "En cours"}</p>
     </h3>
     <div key={index + "institutionContent"} className="content">
         <div key={index + "skillinstitution"} className='skillsJob'>

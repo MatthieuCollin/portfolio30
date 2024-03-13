@@ -14,22 +14,27 @@ const Experiences = (props) =>{
 
     let institutions = props.institutions;
 
-    let schools = institutions.filter((institution)=> institution.type == "school").sort(function(a, b) {
+    let schools = institutions
+    .filter((institution) => institution.type === "school")
+    .sort((a, b) => {
         // Convert the date strings to Date objects
-        let dateA = new Date(a);
-        let dateB = new Date(b);
-      
-        // Subtract the dates to get a value that is either negative, positive, or zero
-        return  dateB - dateA;
-      });;
-    let jobs = institutions.filter((institution)=> institution.type == "work").sort(function(a, b) {
-        // Convert the date strings to Date objects
-        let dateA = new Date(a);
-        let dateB = new Date(b);
+        let dateA = new Date(a.beginDate);
+        let dateB = new Date(b.beginDate);
       
         // Subtract the dates to get a value that is either negative, positive, or zero
         return dateB - dateA;
-      });
+    });
+
+    let jobs = institutions
+    .filter((institution) => institution.type === "work")
+    .sort((a, b) => {
+        // Convert the date strings to Date objects
+        let dateA = new Date(a.beginDate);
+        let dateB = new Date(b.beginDate);
+    
+        // Subtract the dates to get a value that is either negative, positive, or zero
+        return dateB - dateA;
+    });
 
     return(
         <div id='experiences' className="experiences">
