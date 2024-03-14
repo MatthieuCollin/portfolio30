@@ -1,73 +1,83 @@
-import {HiMail, HiPhone} from 'react-icons/hi';
-import emailjs, { send } from '@emailjs/browser';
-import {useRef} from 'react';
+import { HiMail, HiPhone } from "react-icons/hi";
+import emailjs, { send } from "@emailjs/browser";
+import { useRef } from "react";
 
-const Contact = (props) =>{
+const Contact = (props) => {
+  const refForm = useRef();
 
-    const refForm = useRef();
+  let data = props.profil;
 
-    let data = props.profil;
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const sendEmail = (e) =>{
-        e.preventDefault();
+    console.log(e.target);
 
-        console.log(e.target);
-        
-        emailjs
-        .sendForm(
-            'service_pr9e348',
-            'template_pkxqntm',
-            refForm.current,
-            'W6NX56shliq8xGMgH',
-        )
-        .then(
-            ()=>{
-                alert('Message bien envoyé !')
-                window.location.reload(false)
-            },
-            ()=>{
-                alert('Erreur, veuillez ressayer.')
-            }
-        );
-    };
+    emailjs
+      .sendForm(
+        "service_pr9e348",
+        "template_pkxqntm",
+        refForm.current,
+        "W6NX56shliq8xGMgH",
+      )
+      .then(
+        () => {
+          alert("Message bien envoyé !");
+          window.location.reload(false);
+        },
+        () => {
+          alert("Erreur, veuillez ressayer.");
+        },
+      );
+  };
 
-    return(
-        <div id='contact' className="contact">
-            <h2>Me contacter :</h2>
+  return (
+    <div id="contact" className="contact">
+      <h2>Me contacter :</h2>
+      <p>Pour plus d'informations, veuillez me contacter :</p>
+      <div className="contactInfo">
+        <div className="content">
+          <div className="mail">
+            <HiMail className="icon"></HiMail>
             <p>
-                Pour plus d'informations, veuillez me contacter :
+              <span>Mail: </span>
+              {data.mail}
             </p>
-            <div className="contactInfo">
-                <div className="content">
-                    <div className="mail">
-                        <HiMail className='icon'></HiMail>
-                        <p><span>Mail: </span>{data.mail}</p>
-                    </div>
-                    <div className="mail">
-                        <HiPhone className='icon'></HiPhone>
-                        <p><span>Téléphone: </span>{data.phone}</p>
-                    </div>
-                    <div className="mail">
-                        
-                    </div>
-                  
-                </div>
-                <div className="form">
-                    <form ref={refForm} onSubmit={sendEmail}>
-                        <div className="field">
-                            <label htmlFor="from_name">Mail</label>
-                            <input type="email" className='mail' name="from_name" id="from_name" />
-                        </div>
-                        <div className="field">
-                            <label htmlFor="message">Message</label>
-                            <textarea className='text' name="message" id="message" cols={30} />
-                        </div>
-                        <input type="submit" id="button" value="Envoyer" />
-                    </form>
-                </div>
-            </div>
+          </div>
+          <div className="mail">
+            <HiPhone className="icon"></HiPhone>
+            <p>
+              <span>Téléphone: </span>
+              {data.phone}
+            </p>
+          </div>
+          <div className="mail"></div>
         </div>
-    )
-}
+        <div className="form">
+          <form ref={refForm} onSubmit={sendEmail}>
+            <div className="field">
+              <label htmlFor="from_name">Mail</label>
+              <input
+                type="email"
+                className="mail"
+                name="from_name"
+                id="from_name"
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="message">Message</label>
+              <textarea
+                className="text"
+                name="message"
+                id="message"
+                cols={30}
+              />
+            </div>
+            <input type="submit" id="button" value="Envoyer" />
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Contact;

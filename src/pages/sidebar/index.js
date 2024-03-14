@@ -1,72 +1,91 @@
-import { profil } from '../../assets/img';
-import {SiLinkedin, SiGithub, SiPinterest} from 'react-icons/si';
-import {FaHome, FaUser, FaSuitcase, FaMailBulk} from 'react-icons/fa'
-import {MdOutlineWebAsset} from 'react-icons/md'
+import { profil } from "../../assets/img";
+import { SiLinkedin, SiGithub, SiPinterest } from "react-icons/si";
+import { FaHome, FaUser, FaSuitcase, FaMailBulk } from "react-icons/fa";
+import { MdOutlineWebAsset } from "react-icons/md";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const Sidebar = (props) =>{
+const Sidebar = (props) => {
+  let profilDate = props.profil;
 
-    let profilDate = props.profil
-    
-    return(
-        <header className="sidebar">
-            <div className="profil">
-                <img src={profil} alt="profil"  />
-                <h2>{profilDate.lastname} {profilDate.firstname}</h2>
-                <div className="socials">
-                    <a target="_blank" href={`${process.env.REACT_APP_LINKEDIN_LINK}`}><SiLinkedin className='icone'/></a>
-                    <a target="_blank" href={`${process.env.REACT_APP_GITHUB_LINK}`}><SiGithub className='icone'/></a>
-                </div>
-            </div>
-            <ul id='navbar'>
-                <Link
-                    className='link'
-                    activeClass="active"
-                    to="homepage"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                ><FaHome className='icone'/> Accueil</Link>
-                <Link
-                    className='link'
-                    activeClass="active"
-                    to="profil"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                ><FaUser className='icone'/>Profil</Link>
-                <Link
-                    className='link'
-                    activeClass="active"
-                    to="portfolio"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                ><MdOutlineWebAsset className='icone'/>Portfolio</Link>
-                <Link
-                    className='link'
-                    activeClass="active"
-                    to="experiences"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                ><FaSuitcase className='icone'/>Expériences</Link>
-                <Link
-                    className='link'
-                    activeClass="active"
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                ><FaMailBulk className='icone'/>Contact</Link>
-            </ul>
-        </header>
-    )
-}
+  return (
+    <header className="sidebar">
+      <div className="profil">
+        <img src={profil} alt="profil" />
+        <h2>
+          {profilDate.lastname} {profilDate.firstname}
+        </h2>
+        <div className="socials">
+          <a target="_blank" href={`${process.env.REACT_APP_LINKEDIN_LINK}`}>
+            <SiLinkedin className="icone" />
+          </a>
+          <a target="_blank" href={`${process.env.REACT_APP_GITHUB_LINK}`}>
+            <SiGithub className="icone" />
+          </a>
+        </div>
+      </div>
+      <ul id="navbar">
+        <Link
+          className="link"
+          activeClass="active"
+          to="homepage"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+        >
+          <FaHome className="icone" /> Accueil
+        </Link>
+        <Link
+          className="link"
+          activeClass="active"
+          to="profil"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+        >
+          <FaUser className="icone" />
+          Profil
+        </Link>
+        <Link
+          className="link"
+          activeClass="active"
+          to="portfolio"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <MdOutlineWebAsset className="icone" />
+          Portfolio
+        </Link>
+        <Link
+          className="link"
+          activeClass="active"
+          to="experiences"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <FaSuitcase className="icone" />
+          Expériences
+        </Link>
+        <Link
+          className="link"
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <FaMailBulk className="icone" />
+          Contact
+        </Link>
+      </ul>
+    </header>
+  );
+};
 
 export default Sidebar;
