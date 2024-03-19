@@ -6,7 +6,10 @@ const Project = (props) => {
     <div
       key={index + "project"}
       style={{
-        backgroundImage: `url("data:image/png;base64,${project.image}")`,
+        backgroundImage: `url("/static/media/${project.name
+          .toLowerCase()
+          .split(" ")
+          .join("_")}.png")`,
       }}
       className="work cd"
     >
