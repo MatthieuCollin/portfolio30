@@ -6,12 +6,18 @@
   top: 0;
   left: 0;
   bottom: 0;
+  display: flex;  
+  flex-direction: column;
+ 
+
+
   .profil {
-    height: 30%;
+    height: 15vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin: 20px;
   }
 
   img {
@@ -26,7 +32,8 @@
   }
 
   .socials {
-    width: 80%;
+    width: 10vw;
+    margin: 5px;
     display: flex;
     justify-content: space-around;
 
@@ -35,8 +42,7 @@
       font-size: 1.5vw;
       text-decoration: none;
       color: white;
-      width: 50px;
-      height: 50px;
+      padding: 0.5vw;
       border-radius: 50%;
       background-color: #a8a9b4;
       display: flex;

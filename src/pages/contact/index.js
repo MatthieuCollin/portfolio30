@@ -1,6 +1,7 @@
 import { HiMail, HiPhone } from "react-icons/hi";
 import emailjs, { send } from "@emailjs/browser";
 import { useRef } from "react";
+import Blank from "../../components/blank";
 
 const Contact = (props) => {
   const refForm = useRef();
@@ -17,7 +18,7 @@ const Contact = (props) => {
         "service_pr9e348",
         "template_pkxqntm",
         refForm.current,
-        "W6NX56shliq8xGMgH",
+        "W6NX56shliq8xGMgH"
       )
       .then(
         () => {
@@ -26,14 +27,18 @@ const Contact = (props) => {
         },
         () => {
           alert("Erreur, veuillez ressayer.");
-        },
+        }
       );
   };
 
   return (
     <div id="contact" className="contact">
+      <Blank />
+
       <h2>Me contacter :</h2>
       <p>Pour plus d'informations, veuillez me contacter :</p>
+      <Blank />
+
       <div className="contactInfo">
         <div className="content">
           <div className="mail">
@@ -76,6 +81,7 @@ const Contact = (props) => {
           </form>
         </div>
       </div>
+      <Blank />
     </div>
   );
 };

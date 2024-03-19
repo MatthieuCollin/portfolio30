@@ -2,12 +2,14 @@ import { erwan, melvin, nico, profil } from "../../assets/img";
 import { MdArrowForwardIos } from "react-icons/md";
 import { useEffect, useState } from "react";
 import fetchApi from "../../functions/fetchApi";
+import Blank from "../../components/blank";
 
 const Profil = (props) => {
   let data = props.profil;
 
   return (
     <div id="profil" className="profilBox">
+      <Blank />
       <h2>PROFIL</h2>
       <div className="content">
         <div className="about">
@@ -54,6 +56,7 @@ const Profil = (props) => {
           </div>
         </div>
       </div>
+      <Blank />
     </div>
   );
 };
