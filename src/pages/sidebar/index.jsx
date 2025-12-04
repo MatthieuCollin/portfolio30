@@ -15,10 +15,10 @@ const Sidebar = (props) => {
           {profilDate.lastname} {profilDate.firstname}
         </h2>
         <div className="socials">
-          <a target="_blank" href={`${process.env.REACT_APP_LINKEDIN_LINK}`}>
+          <a target="_blank" href={`${import.meta.env.REACT_APP_LINKEDIN_LINK}`}>
             <SiLinkedin className="icone" />
           </a>
-          <a target="_blank" href={`${process.env.REACT_APP_GITHUB_LINK}`}>
+          <a target="_blank" href={`${import.meta.env.REACT_APP_GITHUB_LINK}`}>
             <SiGithub className="icone" />
           </a>
         </div>

@@ -5,9 +5,9 @@ const Loader = (props) => {
     <div className="loader">
       <div className="loader-div">
         <img src={loader}></img>
-        <div class="progress-bar">
+        <div className="progress-bar">
           <div
-            class="progress"
+            className="progress"
             style={{
               width: `${(props.loadingState * 100) / props.dataLength}%`,
             }}
