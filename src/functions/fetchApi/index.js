@@ -3,7 +3,7 @@ function fetchApi(actions, id, type, body) {
   return new Promise((resolve, reject) => {
     try {
       fetch(
-        `${ VITE_API_LINK}${
+        `${import.meta.env.VITE_API_LINK}${
           type
             ? `/api/${actions}/${type}${id ? `/${id}` : ""}`
             : `/api/${actions}${id ? `/${id}` : ""}`
