@@ -1,0 +1,22 @@
+services:
+  front:
+    build: ./
+    ports:
+      - "5173:5173"
+    volumes:
+      # Monter le code source mais PAS node_modules
+      - ./src:/app/src
+      - portfolio-content:/app/public/content
+      - /app/node_modules  # Volume anonyme pour node_modules
+    environment:
+      - NODE_ENV=development
+    networks:
+    - portfolio-network
+    
+volumes:
+  portfolio-content:
+    external: true
+
+networks:
+  portfolio-network:
+    external: true
