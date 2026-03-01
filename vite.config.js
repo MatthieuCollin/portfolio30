@@ -6,4 +6,12 @@ export default defineConfig({
   build: {
     outDir: 'build', // CRA's default build output
   },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    watch: {
+      usePolling: true,
+      interval: 100, // optionnel, 100ms par défaut
+    }
+  }
 });

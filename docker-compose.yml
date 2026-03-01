@@ -6,7 +6,7 @@ services:
     volumes:
       # Monter le code source mais PAS node_modules
       - ./src:/app/src
-      - portfolio-content:/app/public/content
+      - portfolio10-api_portfolio-content:/app/public/content
       - /app/node_modules  # Volume anonyme pour node_modules
     environment:
       - NODE_ENV=development
@@ -14,7 +14,7 @@ services:
     - portfolio-network
     
 volumes:
-  portfolio-content:
+  portfolio10-api_portfolio-content:
     external: true
 
 networks:
