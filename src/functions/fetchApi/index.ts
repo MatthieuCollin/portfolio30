@@ -1,5 +1,5 @@
 // permet de fetch l'api pour les gets, avec id ou non. A voir pour les posts mais je suis pas sur de moi
-function fetchApi(actions, id, type, body) {
+function fetchApi(actions: string, id:string, type:string, body:any) {
   return new Promise((resolve, reject) => {
     try {
       fetch(
