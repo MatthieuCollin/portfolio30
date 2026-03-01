@@ -25,7 +25,7 @@ const Institution = (props) => {
           })}
         </div>
         <a target="_blank" href={institution.link}>
-          <img src={`data:image/png;base64,${institution.image}`} alt="" />
+          <img src={`/app/public/content/${institution.imageUrl}`} alt="" />
         </a>
       </div>
     </div>
